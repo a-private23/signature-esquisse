@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<link href="https://cssheberge.pagesperso-orange.fr/forumsRP.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://www.esquisse-rp.com/20-ltr.css" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Courgette|Grenze|Inconsolata|Indie+Flower|Open+Sans|Oswald&amp;display=swap" rel="stylesheet">
+<title>Signature</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>function selectCode(e) {
+    var s = $(e).closest("dl").find(".cont_code,code").get(0), range, selection;
+    var a = s, z = s;
+    while(a.nodeType == 1 && a.childNodes.length) a=a.firstChild;
+    while(z.nodeType == 1 && z.childNodes.length) z=z.lastChild;
+    if (!$(a).is('.fixff')) {
+        var fix = $('<span class="fixff"/>').insertBefore(a);
+    } else {
+      a = a.nextSibling;
+    }
+    if (document.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(s);
+        range.select();
+    } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.setStart(a, 0);
+        range.setEnd(z, z.nodeValue ? z.nodeValue.length : 0);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+};
+</script>
+
+<style type="text/css">
+
+  
+    .selectCode { cursor:pointer; font-size: 75%}
+    div.cont_code { clear: right; }
+.sign-esquisse{display: flex; justify-content: space-evenly; margin-top: 10px;}
+.sign-esquisse a {text-decoration: none;}
+.sign-esquisse input{display: none;}
+.sign-esquisse div {display: inline-block;}
+.sign-esquisse label{cursor: help;}
+.sign-esquisse label img{width: 75px; height: 30px; object-fit: cover; border: 1px dotted; border-radius: 15px; object-position: center 20%; }
+
+
+
+.sign-esquisse .codebox{padding: 0;display: inline-block;font-size: 5px;width: 15%;border: none;overflow: hidden;height: 40px; background: transparent;}
+.sign-esquisse dl.codebox::before {display: none;}
+.sign-esquisse dl.codebox dt{border: none; color: inherit;}
+
+
+.sign-esquisse div div{display: none;text-align: center; width: 95%;position: absolute;top: 40px; left: calc(calc(100% - 95%) / 2);height: 100px; overflow: auto; scrollbar-width: thin;}
+input:checked ~ div{display: block;}
+.sign-esquisse .aume::first-letter{font-weight:normal; font-size: 100%; font-style: inherit; font-family: inherit; float:none;}
+p{margin-bottom: 5px;}
+.sign-esquisse div div .cont_code {display: inline-block; position: relative; top: -15px; height: auto; color: transparent;pointer-events:none;}
+
+ .selectCode img { cursor:pointer;	object-fit: cover;	width: 30px; height: 30px; font-size: 0; border: 1px dotted; border-radius: 5px;}
+</style>
+</head>
+<body>
+<div class="sign-esquisse">
+	<!-- ONGLET SOMMAIRE--><div>
+		<label for="ongl1" name="selectperso" style="width: 75px; display: inline-block; text-align: center; background: rgba(0,0,0,0.1);"title="Sommaire ou page des dés"><a target="_blank" href="https://www.esquisse-rp.com/t2545-quand-la-libellule-lance-le-de"><img src="https://i83.servimg.com/u/f83/14/68/18/69/dzos10.png" style="object-fit: contain; border: none; width: 30px;" /></a></label>
+		<input type="radio" id="ongl1" name="selectperso" checked="" />
+
+		<div>
+			<p style="font-size: 120%;padding: 10px 0;">Codes de transformation de mes persos</p>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="https://i73.servimg.com/u/f73/20/30/93/29/avatar13.jpg" title="La libellule" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="André" /&gt;	</div>			</dd>		</dl>		<!--/lt;(...)/&gt; = demande à l'ordinateur de copier qqch-->
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="https://i73.servimg.com/u/f73/20/30/93/29/andrzo14.png" title="Le robot" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="AndréC"" /&gt;	</div>			</dd>		</dl>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="https://i73.servimg.com/u/f73/20/30/93/29/marie-10.png" title="La princesse des licornes" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="Marie-Suzanne" /&gt;	</div>			</dd>		</dl>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="https://i.servimg.com/u/f73/20/30/93/29/avatar13.png" title="" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="" /&gt;	</div>		<!--	</dd>		</dl>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="" title="" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="" /&gt;	</div>			</dd>		</dl>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="" title="" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="" /&gt;	</div>			</dd>		</dl>
+			<dl class="codebox">	<dt><span onclick="selectCode(this)" class="selectCode">
+				<img src="" title="" /></span></dt><dd class="code">
+				<div class="cont_code"> &lt;transformation perso="" /&gt;	</div>			</dd>		</dl>
+-->
+		</div>
+	</div>
+	
+	
+	
+	<!-- ONGLET 2--><div>
+		<label for="ongl2" name="selectperso" title="André (Sables)"><img src="https://i73.servimg.com/u/f73/20/30/93/29/avatar13.jpg" style="object-position: center 34%;"/></label>     <!--title : ici c'est la couleur-->
+		<input type="radio" id="ongl2" name="selectperso" />
+		<div><a target="_blank" href="https://www.esquisse-rp.com/t2532-dans-les-airs-fiche-d-andre-dubois" title="La libellule parle en #00ff00" style="font-size: 130%;color: #00ff00;">André DUBOIS (#00ff00)</a>
+										<!--target="attribute"
+										lien pour les attributs : http://roger.neel.free.fr/langages/cours_htm/courshtml/lientarget.html
+										https://developer.mozilla.org/fr/docs/Web/CSS/attr
+										liste non exhaustive de couleurs : https://lucidar.me/fr/web-dev/css-color-list/-->
+			<p>S'étant réveillé à l'Esquisse sous la forme d'une grosse libellule muette, ce professeur de physique-chimie veut sortir de l'Esquisse. De nature curieuse, il tend à s'intéresser à ce qu'il découvre. Avec l'aide de son sang-froid, il essaie de s'adapter à ce monde et à son propre corps.</p></div>
+		</div>
+	
+	
+	
+	<!-- ONGLET 3--><div>
+		<label for="ongl3" name="selectperso" title="André (Câbles)"><img src="https://i73.servimg.com/u/f73/20/30/93/29/andrzo14.png" style="object-position: center 62%;"/></label>
+		<input type="radio" id="ongl3" name="selectperso" />
+		<div><a target="_blank" href="https://www.esquisse-rp.com/t2574-andre-des-cables-ghost-in-the-shell" " title="Le robot parle en #e0ffff" style="font-size: 130%;color: e0ffff;">André DUBOIS (#e0ffff)</a>
+			<p>Auparavant un humain sur Terre, André est devenu un robot en forme de libellule à son arrivée dans l'Esquisse. Cet ancien professeur de physique-chimie s'est reconverti en électricien du groupe Volta, pour le grand plaisir de Wilkins. Il essaie de devenir riche pour financer les recherches d'une éventuelle sortie de l'Esquisse, mais vu sa modestie de base, être aussi ambitieux lui est compliqué.</p></div>
+		</div>
+	
+	
+	
+	<!-- ONGLET 4--><div>
+		<label for="ongl4" name="selectperso" title="Marie-Suzanne (Brises)"><img src="https://i73.servimg.com/u/f73/20/30/93/29/marie-10.png" style="object-position: center 63%;"/></label>
+		<input type="radio" id="ongl4" name="selectperso" />
+		<div><a target="_blank" href="https://www.esquisse-rp.com/t2688-marie-suzanne-princesse-de-licornia" title="La princesse des licornes parle en #ff99ff" style="font-size: 130%;color: ff99ff;">Marie-Suzanne de Licornia (#ff99ff)</a>
+			<p>Marie-Suzanne pense être la princesse de Licornia (un royaume imaginaire) et elle veut retourner dans son propre monde. Depuis son arrivée dans l'Esquisse, elle n'arrive plus à faire de la magie, sa corne émet juste une faible lueur. Elle est l'un des Sorteurs les plus déterminés et optimistes à l'idée de pouvoir un jour sortir de l'Esquisse.</p></div>
+		</div>
+	
+	
+	
+	<!-- ONGLET 5--><div>
+		<label for="ongl5" name="selectperso" title="Dorante (Brises)" ><img src="https://i73.servimg.com/u/f73/20/30/93/29/petite10.png" style="object-position: center 70%;"/></label>
+		<input type="radio" id="ongl5" name="selectperso" />
+		<div><a target="_blank" href="" title="Le comédien mystique parle en #ffffff"  style="font-size: 130%;color: ffffff;" >Dorante (#ffffff)</a><a target="_blank" href="" title=""  style="font-size: 130%;" > & </a><a target="_blank" href="" title="Le masque parle en #99632e"  style="font-size: 130%;color: 99632e;" >Clindor (#99632e)</a>
+			<p>Dorante est un homme calme et mystique qui pense avoir été créé par la Créatrice pour préserver et améliorer l'harmonie de l'Esquisse et entre les Dessinateurs. Il est aussi un Arthyste, faisant partie des comédiens. Clindor est un masque amnésique qui ne peut parler qu'à proximité de Dorante. Etant très colérique, il tend à réagir d'une manière impulsive, ce qui risque de provoquer des conflits.
+Dorante tend à emmener Clindor avec lui. Il pense que la Créatrice les a liés, même si Clindor vient probablement de la Terre. Leurs caractères sont très opposés, ce qui peut compliquer leur relation. Mais en faisant des concessions l'un pour l'autre, ils arrivent à s'entendre.
+</p></div>
+		</div>	
+<!-- https://i73.servimg.com/u/f73/20/30/93/29/petit_11.png-->
+
+	
+	<!-- ONGLET 6--><div>
+<!--		<label for="ongl5" name="selectperso" title=""><img src=""/></label>
+		<input type="radio" id="ongl5" name="selectperso" />
+		<div><a target="_blank" href="" title="" style="font-size: 130%;color: 99632e;"></a>
+			<p></p></div>
+		</div>	
+-->
+
+	
+	<!-- ONGLET 7--><div>
+<!--		<label for="ongl5" name="selectperso" title=""><img src=""/></label>
+		<input type="radio" id="ongl5" name="selectperso" />
+		<div><a target="_blank" href="" title=""></a>
+			<p>Description</p></div>
+		</div>	
+	-->
+	
+	<!-- ONGLET 8--><div>
+<!--		<label for="ongl5" name="selectperso" title=""><img src=""/></label>
+		<input type="radio" id="ongl5" name="selectperso" />
+		<div><a target="_blank" href="" title=""></a>
+			<p>Description</p></div>
+		</div>
+	-->
+	
+	
+	
+	
+</div>
+
+
+</body>
+</html>
